@@ -1,14 +1,12 @@
-
-const taskInput = document.querySelector('#task-input') as HTMLInputElement;
-const addTaskButton = document.querySelector('#add-task-btn') as HTMLButtonElement;
-const taskList = document.querySelector('#task-list') as HTMLUListElement;
-
-let tasks: Task[] = [];
-
-addTaskButton?.addEventListener('click', () => {
+"use strict";
+const taskInput = document.querySelector('#task-input');
+const addTaskButton = document.querySelector('#add-task-btn');
+const taskList = document.querySelector('#task-list');
+let tasks = [];
+addTaskButton === null || addTaskButton === void 0 ? void 0 : addTaskButton.addEventListener('click', () => {
     const taskContent = taskInput.value.trim();
     if (taskContent) {
-        const newTask: Task = {
+        const newTask = {
             id: Date.now(),
             content: taskContent,
             completed: false
@@ -17,10 +15,8 @@ addTaskButton?.addEventListener('click', () => {
         renderTasks();
         taskInput.value = '';
     }
-
     console.log("Hello!");
 });
-
 function renderTasks() {
     taskList.innerHTML = tasks.map(task => `
         <li>
@@ -30,9 +26,7 @@ function renderTasks() {
     `).join('');
     console.log("Hello!");
 }
-
-
-function deleteTask(taskId: number) {
+function deleteTask(taskId) {
     tasks = tasks.filter(task => task.id !== taskId);
     renderTasks();
 }
