@@ -1,4 +1,4 @@
-# Nom du Projet
+# Todo_TS
 
 Ce projet a été réalisé dans le but de m'exercer sur de petits concepts de TypeScript. Il explore des fonctionnalités telles que les types, les interfaces, et la programmation orientée objet, tout en intégrant HTML et CSS pour créer une interface utilisateur simple
 L'objectif est de renforcer ma compréhension de TypeScript avec Dom
