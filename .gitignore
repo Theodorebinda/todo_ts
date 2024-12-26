@@ -20,7 +20,7 @@ logs/
 .env.production.local
 
 .gitignore/
-.gitignore
+# .gitignore
 
 # MacOS
 .DS_Store
