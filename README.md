@@ -6,17 +6,20 @@ L'objectif est de renforcer ma compréhension de TypeScript avec Dom
 
 ## Table des Matières
 
-- [Technologies Utilisées](#technologies-utilisées)
-- [Installation](#installation)
-- [Utilisation](#utilisation)
-- [Contribuer](#contribuer)
-- [Licence](#licence)
+- [Todo\_TS](#todo_ts)
+  - [Table des Matières](#table-des-matières)
+  - [Technologies Utilisées](#technologies-utilisées)
+  - [Installation](#installation)
+  - [Utilisation](#utilisation)
+  - [Contribuer](#contribuer)
+  - [Licence](#licence)
 
 ## Technologies Utilisées
 
 - **TypeScript** : Un sur-ensemble de JavaScript qui ajoute des types statiques.
 - **HTML** : Le langage de balisage standard pour créer des pages Web.
 - **CSS** : Utilisé pour styliser les pages HTML.
+- **Tailwind** : Pour styliser les interfaces
 
 ## Installation
 
@@ -62,4 +65,4 @@ Ouvrez votre navigateur et accédez à `http://localhost:3000` pour voir votre a
 
 ## Licence
 
-Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+Ce projet est sous licence aucune licence
