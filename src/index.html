@@ -14,7 +14,7 @@
                 <div class=" bg-slate-200 rounded-md mx-3 py-1 justify-center flex w-11/12">
                     <h2>My name</h2>
                 </div>
-                <i data-lucide="chevrons-left" class="my-class"></i>
+
             </div>
 
             <div class="flex justify-between flex-col h-[40vw]">
@@ -29,8 +29,14 @@
 
 
         </div>
-        <div class="w-full p-10">
-            <h1>Mes Tâches</h1>
+
+        <!-- Contents -->
+        <div class="w-full p-10 flex flex-col">
+            <div class="flex items-start ">
+                <button class="toggleButton"> <i data-lucide="chevrons-left" class=""></i></button>
+                <button class="toggleCloseButton hidden"> <i data-lucide="chevrons-right" class=""></i></button>
+                <h1>Mes Tâches</h1>
+            </div>
             <div class="input-container">
                 <input type="text" id="task-input" placeholder="Ajouter une tâche">
                 <button id="add-task-btn" class="">Ajouter</button>
@@ -44,7 +50,10 @@
 
     <script src="/dist/app.js"></script>
     <script src="/dist/models/person.js"></script>
+    <script src="/dist/sidebar.js"></script>
+
     <script src="https://unpkg.com/lucide@latest"></script>
+
     <script>
         lucide.createIcons();
     </script>

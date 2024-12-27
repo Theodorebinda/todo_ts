@@ -20,6 +20,7 @@ L'objectif est de renforcer ma compréhension de TypeScript avec Dom
 - **HTML** : Le langage de balisage standard pour créer des pages Web.
 - **CSS** : Utilisé pour styliser les pages HTML.
 - **Tailwind** : Pour styliser les interfaces
+- **Lucide icon** : Pour les icones
 
 ## Installation
 
