@@ -5,12 +5,13 @@ const body = document.querySelector('body') as HTMLBodyElement;
 
 openPopup.addEventListener('click', () => {
     contentPopup.classList.remove('hidden');
-    body.classList.add('opacity-50');
+    contentPopup.classList.add('flex');
     console.log("Popup ouvert");
 });
 
 closePopup.addEventListener('click', () => {
     contentPopup.classList.add('hidden');
+    contentPopup.classList.remove('flex');
     body.classList.remove('opacity-50');
     console.log("Popup fermé");
 });

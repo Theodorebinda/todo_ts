@@ -2,6 +2,16 @@
 const taskInput = document.querySelector('#task-input') as HTMLInputElement;
 const addTaskButton = document.querySelector('#add-task-btn') as HTMLButtonElement;
 const taskList = document.querySelector('#task-list') as HTMLUListElement;
+const poppup = document.querySelector('.popup') as HTMLDivElement;
+
+function closedPopup() {
+    let isOpen = false;
+    if (isOpen) {
+        poppup.classList.add('hidden');
+        console.log('Popup fermé');
+    }
+
+}
 
 let tasks: Task[] = [];
 
@@ -17,8 +27,9 @@ addTaskButton?.addEventListener('click', () => {
         renderTasks();
         taskInput.value = '';
     }
-
+    closedPopup();
     console.log("Hello!");
+
 });
 
 function renderTasks() {
