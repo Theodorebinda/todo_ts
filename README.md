@@ -66,4 +66,4 @@ Ouvrez votre navigateur et accédez à `http://localhost:3000` pour voir votre a
 
 ## Licence
 
-Ce projet est sous licence aucune licence
+Ce projet est sous aucune licence
