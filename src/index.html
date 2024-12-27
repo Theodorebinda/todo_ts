@@ -7,8 +7,8 @@
     <link href="./output.css" rel="stylesheet">
 </head>
 
-<body class="min-w-max">
-    <main class="flex   h-screen   px-2  border-gray-300 border-t-2 ">
+<body class="min-w-max body">
+    <main class="main flex h-screen   px-2  border-gray-300 border-t-2 ">
         <div class="sidebar border-r-gray-300 border-r-2 w-1/4  pt-10">
             <div class="flex justify-around px-2  border-b-2 pb-4 items-center ">
                 <div class=" bg-slate-200 rounded-md mx-3 py-1 justify-center flex w-11/12">
@@ -40,15 +40,16 @@
                 <h1 class="font-bold text-3xl pl-4 pb-4">Mes Tâches</h1>
                 <div class="border-b-2"></div>
                 <div class="py-4 flex gap-4">
-                    <button class="px-2 py-1 rounded-md text-sm font-semibold bg-sky-500 ">New tak</button>
+                    <button class="openPopup px-2 py-1 rounded-md text-sm font-semibold bg-sky-500 ">New tak</button>
                     <button class="px-2 py-1 rounded-md text-sm font-semibold bg-slate-400 text-white ">Filter</button>
                 </div>
 
 
-                <!-- <div class="input-container">
+                <div class="contentPopup input-container hidden">
+                    <button class="closePopup text-red-600">X</button>
                     <input type="text" id="task-input" placeholder="Ajouter une tâche">
-                    <button id="add-task-btn" class="">Ajouter</button>
-                </div> -->
+                    <button id="add-task-btn" class=" closePopup">Ajouter</button>
+                </div>
                 <!-- task-list -->
                 <ul class="bg-slate-50 shadow-md border  rounded-md" id="">
                     <li class="p-2">
@@ -74,6 +75,8 @@
     <script src="/dist/app.js"></script>
     <script src="/dist/models/person.js"></script>
     <script src="/dist/sidebar.js"></script>
+    <script src="/dist/popup_task.js"></script>
+
 
     <script src="https://unpkg.com/lucide@latest"></script>
 

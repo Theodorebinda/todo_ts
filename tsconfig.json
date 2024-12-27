@@ -12,6 +12,7 @@
         "src/app.ts",
         "src/sidebar.ts",
         "src/models/person.ts",
+        "src/popup_task.ts"
         // "src/routes/**/*.ts",
         // "src/services/**/*.ts"
     ]
