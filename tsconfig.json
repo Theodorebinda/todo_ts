@@ -11,7 +11,7 @@
     "files": [
         "src/app.ts",
         "src/sidebar.ts",
-        "src/models/person.ts",
+        "src/models/tasks.ts",
         "src/popup_task.ts"
         // "src/routes/**/*.ts",
         // "src/services/**/*.ts"

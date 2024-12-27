@@ -10,11 +10,7 @@ const closePopupButtons = document.querySelectorAll('.closePopup') as NodeListOf
 openPopupButton.addEventListener('click', () => poppup.classList.remove('hidden'));
 closePopupButtons.forEach(button => button.addEventListener('click', () => poppup.classList.add('hidden')));
 
-interface Task {
-    id: number;
-    content: string;
-    completed: boolean;
-}
+
 
 let tasks: Task[] = [];
 
@@ -41,7 +37,7 @@ function renderTasks() {
                             <span class="title font-medium text-lg">${task.content}</span>
                         </div>
                         <div class="flex gap-4 items-center">
-                            <span class="text-sm">Date le 27/12/2025</span>
+                            <span class="text-sm">${task.id}</span>
                             <i data-lucide="message-circle" class="size-4"></i>
                             <i data-lucide="pencil" class="size-4"></i>
                         </div> </li>
