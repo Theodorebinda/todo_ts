@@ -1,45 +1,67 @@
-
 const taskInput = document.querySelector('#task-input') as HTMLInputElement;
 const addTaskButton = document.querySelector('#add-task-btn') as HTMLButtonElement;
 const taskList = document.querySelector('#task-list') as HTMLUListElement;
 const poppup = document.querySelector('.popup') as HTMLDivElement;
 
-function closedPopup() {
-    let isOpen = false;
-    if (isOpen) {
-        poppup.classList.add('hidden');
-        console.log('Popup fermé');
-    }
+// Gérer l'ouverture et la fermeture du popup
+const openPopupButton = document.querySelector('.openPopup') as HTMLButtonElement;
+const closePopupButtons = document.querySelectorAll('.closePopup') as NodeListOf<HTMLButtonElement>;
 
+openPopupButton.addEventListener('click', () => poppup.classList.remove('hidden'));
+closePopupButtons.forEach(button => button.addEventListener('click', () => poppup.classList.add('hidden')));
+
+interface Task {
+    id: number;
+    content: string;
+    completed: boolean;
 }
 
 let tasks: Task[] = [];
 
-addTaskButton?.addEventListener('click', () => {
+addTaskButton.addEventListener('click', () => {
     const taskContent = taskInput.value.trim();
     if (taskContent) {
         const newTask: Task = {
             id: Date.now(),
             content: taskContent,
-            completed: false
+            completed: false,
         };
         tasks.push(newTask);
         renderTasks();
         taskInput.value = '';
     }
-    closedPopup();
-    console.log("Hello!");
-
+    poppup.classList.add('hidden');
 });
 
 function renderTasks() {
     taskList.innerHTML = tasks.map(task => `
-        <li>
-            ${task.content}
-            <button onclick="deleteTask(${task.id})">Supprimer</button>
-        </li>
+        <div class="flex items-center justify-between">
+         <li class="p-2">
+                        <div class="flex items-center justify-start gap-4"> <input type="checkbox" class="size-4">
+                            <span class="title font-medium text-lg">${task.content}</span>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <span class="text-sm">Date le 27/12/2025</span>
+                            <i data-lucide="message-circle" class="size-4"></i>
+                            <i data-lucide="pencil" class="size-4"></i>
+                        </div> </li>
+            <button class="delete-btn bg-red-500 px-2 py-1 rounded" data-id="${task.id}">
+                Supprimer
+            </button>
+        </div>
+
+      
+           
+        
     `).join('');
-    console.log("Hello!");
+
+    // Ajouter les gestionnaires pour les boutons "Supprimer"
+    document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const taskId = parseInt((button as HTMLElement).dataset.id!);
+            deleteTask(taskId);
+        });
+    });
 }
 
 
@@ -47,4 +69,3 @@ function deleteTask(taskId: number) {
     tasks = tasks.filter(task => task.id !== taskId);
     renderTasks();
 }
-
