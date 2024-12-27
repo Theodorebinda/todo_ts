@@ -1,4 +1,5 @@
 const taskInput = document.querySelector('#task-input') as HTMLInputElement;
+const taskDescription = document.querySelector('#task-description') as HTMLInputElement;
 const addTaskButton = document.querySelector('#add-task-btn') as HTMLButtonElement;
 const taskList = document.querySelector('#task-list') as HTMLUListElement;
 const poppup = document.querySelector('.popup') as HTMLDivElement;
@@ -24,10 +25,12 @@ function formatDate(timestamp: number): string {
 
 addTaskButton.addEventListener('click', () => {
     const taskContent = taskInput.value.trim();
+    const taskDescriptionContent = taskDescription.value.trim();
     if (taskContent) {
         const newTask: Task = {
             id: Date.now(),
-            content: taskContent,
+            title: taskContent,
+            descriptions: taskDescriptionContent,
             createdAt: formatDate(Date.now()),
             completed: false,
         };
@@ -40,12 +43,16 @@ addTaskButton.addEventListener('click', () => {
 
 function renderTasks() {
     taskList.innerHTML = tasks.map(task => `
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between bg-slate-50 shadow-md border rounded-md ">
          <li class="p-2">
-                        <div class="flex items-center justify-start gap-4"> <input type="checkbox" class="size-4">
-                            <span class="title font-medium text-lg">${task.content}</span>
+                    <div class="flex flex-col ">
+                        <div class="flex  items-center justify-start gap-4"> <input type="checkbox" class="size-4">
+                            <span class="title font-medium text-lg">${task.title}</span>
                         </div>
-                        <div class="flex gap-4 items-center">
+                         <span class="text-xs ">${task.descriptions}</span>
+                    </div>
+                        
+                        <div class="flex gap-4 items-center py-2">
                             <span class="text-sm">${task.createdAt}</span>
                             <i data-lucide="message-circle" class="size-4"></i>
                             <i data-lucide="pencil" class="size-4"></i>
@@ -67,10 +74,12 @@ function renderTasks() {
             deleteTask(taskId);
         });
     });
+    // lucide.createIcons();
 }
 
 
 function deleteTask(taskId: number) {
     tasks = tasks.filter(task => task.id !== taskId);
     renderTasks();
+
 }

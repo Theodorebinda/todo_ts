@@ -1,6 +1,7 @@
 interface Task {
     id: number;
-    content: string;
+    title: string;
+    descriptions: string;
     completed: boolean;
     createdAt: string;
 }
