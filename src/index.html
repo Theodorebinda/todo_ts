@@ -49,14 +49,14 @@
                 <div
                     class="popup  contentPopup input-container fixed inset-0 bg-black bg-opacity-50  justify-center items-center z-60  hidden">
                     <div class="bg-white w-1/3 h-[40vh] rounded-md p-4">
-                        <div class="flex justify-between border-b-2">
+                        <div class="flex justify-between border-b-2 text-2xl font-bold">
                             <h2>Ajouter une Tache </h2>
                             <button class="closePopup text-red-600 top-0"><i data-lucide="x"
                                     class="size-8"></i></button>
                         </div>
-                        <div class="flex gap-4">
+                        <div class="flex gap-2 flex-col items-start">
                             <label for="task-name">Nom de la tâche:</label>
-                            <input type="text" id="task-input" placeholder="Ajouter une tâche" required>
+                            <input type="text" id="task-input" placeholder="Ajouter une tâche" required class="bg-slate-200 py-1 px-2 rounded-md target:border-none focus:border-none border-none active:border-none">
                         </div>
                         <div>
                             <label for="task-description">Description de la tâche:</label>
