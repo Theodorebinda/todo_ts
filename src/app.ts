@@ -4,7 +4,7 @@ const addTaskButton = document.querySelector('#add-task-btn') as HTMLButtonEleme
 const taskList = document.querySelector('#task-list') as HTMLUListElement;
 const poppup = document.querySelector('.popup') as HTMLDivElement;
 
-// Gérer l'ouverture et la fermeture du popup
+
 const openPopupButton = document.querySelector('.openPopup') as HTMLButtonElement;
 const closePopupButtons = document.querySelectorAll('.closePopup') as NodeListOf<HTMLButtonElement>;
 
