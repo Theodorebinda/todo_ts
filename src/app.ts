@@ -53,7 +53,7 @@ function renderTasks() {
                     </div>
                         
                         <div class="flex gap-4 items-center py-2">
-                            <span class="text-sm">${task.createdAt}</span>
+                            <span class="text-sm">${task.createdAt}</span
                             <i data-lucide="message-circle" class="size-4"></i>
                             <i data-lucide="pencil" class="size-4"></i>
                         </div> </li>
