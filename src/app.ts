@@ -74,7 +74,7 @@ function renderTasks() {
             deleteTask(taskId);
         });
     });
-    // lucide.
+    // lucide
 }
 
 function deleteTask(taskId: number) {
