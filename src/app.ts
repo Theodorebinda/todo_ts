@@ -67,7 +67,7 @@ function renderTasks() {
         
     `).join('');
 
-    // Ajouter les gestionnaires pour les boutons "Supprimer"
+    
     document.querySelectorAll('.delete-btn').forEach(button => {
         button.addEventListener('click', () => {
             const taskId = parseInt((button as HTMLElement).dataset.id!);
