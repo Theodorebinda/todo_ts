@@ -74,7 +74,7 @@ function renderTasks() {
             deleteTask(taskId);
         });
     });
-    // luci
+    // luc
 }
 
 function deleteTask(taskId: number) {
