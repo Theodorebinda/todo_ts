@@ -77,7 +77,6 @@ function renderTasks() {
     // lucide.cr
 }
 
-
 function deleteTask(taskId: number) {
     tasks = tasks.filter(task => task.id !== taskId);
     renderTasks();
